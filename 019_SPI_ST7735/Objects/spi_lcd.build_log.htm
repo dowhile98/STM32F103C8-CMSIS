@@ -1,0 +1,147 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jeffry Quino Briceño, UNAC, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+C:\Users\Ronald Quino Bueno\Desktop\CURSOS UDEMY\STM32\ARM\019_SPI_ST7735\spi_lcd.uvprojx
+Project File Date:  04/24/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling st7735.c...
+st7735.h(241): warning:  #1295-D: Deprecated declaration ST7735_Unselect - give arg types
+  void ST7735_Unselect();
+st7735.c(91): warning:  #223-D: function "GPIO_WritePin" declared implicitly
+      GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, Bit_RESET);
+st7735.c(91): warning:  #167-D: argument of type "int" is incompatible with parameter of type "GPIO_TypeDef *"
+      GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, Bit_RESET);
+st7735.c(91): error:  #165: too few arguments in function call
+      GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, Bit_RESET);
+st7735.c(91): error:  #18: expected a ")"
+      GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, Bit_RESET);
+st7735.c(95): warning:  #223-D: function "HAL_GPIO_WritePin" declared implicitly
+      HAL_GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, GPIO_PIN_SET);
+st7735.c(95): error:  #20: identifier "GPIO_PIN_SET" is undefined
+      HAL_GPIO_WritePin(ST7735_CS_GPIO_Port, ST7735_CS_Pin, GPIO_PIN_SET);
+st7735.c(99): warning:  #223-D: function "HAL_GPIO_WritePin" declared implicitly
+      HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_RESET);
+st7735.c(99): error:  #20: identifier "GPIO_PIN_RESET" is undefined
+      HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_RESET);
+st7735.c(100): warning:  #223-D: function "HAL_Delay" declared implicitly
+      HAL_Delay(5);
+st7735.c(101): error:  #20: identifier "GPIO_PIN_SET" is undefined
+      HAL_GPIO_WritePin(ST7735_RES_GPIO_Port, ST7735_RES_Pin, GPIO_PIN_SET);
+st7735.c(105): warning:  #223-D: function "HAL_GPIO_WritePin" declared implicitly
+      HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_RESET);
+st7735.c(105): error:  #20: identifier "GPIO_PIN_RESET" is undefined
+      HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_RESET);
+st7735.c(106): warning:  #223-D: function "HAL_SPI_Transmit" declared implicitly
+      HAL_SPI_Transmit(&ST7735_SPI_PORT, &cmd, sizeof(cmd), HAL_MAX_DELAY);
+st7735.c(106): error:  #158: expression must be an lvalue or a function designator
+      HAL_SPI_Transmit(&ST7735_SPI_PORT, &cmd, sizeof(cmd), HAL_MAX_DELAY);
+st7735.c(106): error:  #20: identifier "HAL_MAX_DELAY" is undefined
+      HAL_SPI_Transmit(&ST7735_SPI_PORT, &cmd, sizeof(cmd), HAL_MAX_DELAY);
+st7735.c(109): error:  #20: identifier "size_t" is undefined
+  static void ST7735_WriteData(uint8_t* buff, size_t buff_size) {
+st7735.c(110): warning:  #223-D: function "HAL_GPIO_WritePin" declared implicitly
+      HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_SET);
+st7735.c(110): error:  #20: identifier "GPIO_PIN_SET" is undefined
+      HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_SET);
+st7735.c(111): warning:  #223-D: function "HAL_SPI_Transmit" declared implicitly
+      HAL_SPI_Transmit(&ST7735_SPI_PORT, buff, buff_size, HAL_MAX_DELAY);
+st7735.c(111): error:  #158: expression must be an lvalue or a function designator
+      HAL_SPI_Transmit(&ST7735_SPI_PORT, buff, buff_size, HAL_MAX_DELAY);
+st7735.c(111): error:  #20: identifier "HAL_MAX_DELAY" is undefined
+      HAL_SPI_Transmit(&ST7735_SPI_PORT, buff, buff_size, HAL_MAX_DELAY);
+st7735.c(135): warning:  #223-D: function "HAL_Delay" declared implicitly
+              HAL_Delay(ms);
+st7735.c(250): warning:  #223-D: function "HAL_GPIO_WritePin" declared implicitly
+      HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_SET);
+st7735.c(250): error:  #20: identifier "GPIO_PIN_SET" is undefined
+      HAL_GPIO_WritePin(ST7735_DC_GPIO_Port, ST7735_DC_Pin, GPIO_PIN_SET);
+st7735.c(253): warning:  #223-D: function "HAL_SPI_Transmit" declared implicitly
+              HAL_SPI_Transmit(&ST7735_SPI_PORT, data, sizeof(data), HAL_MAX_DELAY);
+st7735.c(253): error:  #158: expression must be an lvalue or a function designator
+              HAL_SPI_Transmit(&ST7735_SPI_PORT, data, sizeof(data), HAL_MAX_DELAY);
+st7735.c(253): error:  #20: identifier "HAL_MAX_DELAY" is undefined
+              HAL_SPI_Transmit(&ST7735_SPI_PORT, data, sizeof(data), HAL_MAX_DELAY);
+st7735.c: 13 warnings, 15 errors
+".\Objects\spi_lcd.axf" - 15 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.5.1
+   * Component: GPIO Version: 3.5.0
+   * Component: RCC Version: 3.5.0
+   * Component: SPI Version: 3.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\Ronald Quino Bueno\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\Ronald Quino Bueno\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\Ronald Quino Bueno\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:SPI:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_spi.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_spi.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
